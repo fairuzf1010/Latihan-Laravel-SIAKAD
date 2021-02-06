@@ -16,7 +16,7 @@ class AuthController extends Controller
     {
         if(Auth::attempt($request->only('email','password')))
         {
-            return redirect('/dashboard'); 
+            return redirect('/dashboard');
         }
 
         return redirect('/login');
@@ -27,4 +27,11 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/login');
     }
+
+
+
+
+
+
+
 }

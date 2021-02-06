@@ -26,14 +26,14 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
           <i>  </i>
         </div>
-        <div class="sidebar-brand-text mx-3">MechTech<sup>IDN</sup></div>
+        <div class="sidebar-brand-text mx-3">Regna<sup>GuruApps</sup></div>
       </a>
 
       <!-- Divider -->
@@ -158,7 +158,7 @@
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-danger" type="button">
+                <button class="btn btn-success" type="button">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -334,9 +334,20 @@
           <div class="alert alert-success" role = "alert"> Data Berhasil Diinput</div>
           @endif
           <!-- Page Heading -->
+<!--
+<div class="row">
+<div class="col-md-3">
+
+
+
+
+</div>
+</div>
+-->
+
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            @yield('judul') 
-            
+            @yield('judul')
+
 
 <!-- Button trigger modal -->
 <a href="" class="btn btn-dark d-none d-sm-inline-block" data-toggle="modal" data-target="#staticBackdrop" >
@@ -354,7 +365,7 @@
         </button>
       </div>
       <div class="modal-body">
-        
+
 
 
 
@@ -372,7 +383,7 @@
       <option value = "Teknik Biomedik">Departemen Teknik Biomedik</option>
     </select>
   </div>
- 
+
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Progres</label>
     <textarea name = "progres" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -395,16 +406,16 @@
 
 </form>
 
-          
-          
 
-          
-          
-          
-          
-          
-          
-          
+
+
+
+
+
+
+
+
+
           </div>
 
 

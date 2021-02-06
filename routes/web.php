@@ -11,8 +11,14 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 /*
@@ -25,6 +31,7 @@ Route::get('/beranda', 'MasukController@beranda');
 Route::get('/utama','MasukController@utama');
 Route::get('/tabel','MasukController@tabel');
 Route::get('/dashboard','MasukController@dashboard')->middleware('auth');
+Route::get('/register','Auth\RegisterController@register')->name('register');
 Route::get('/login','AuthController@login')->name('login');
 Route::get('/logout','AuthController@logout');
 
@@ -37,5 +44,7 @@ Route::get('/siswa/{id}/profile','SiswaController@profile');
 Route::get('/siswa/exportexcel','SiswaController@exportExcel');
 Route::get('/siswa/exportpdf','SiswaController@exportPdf');
 Route::post('/postlogin','AuthController@postlogin');
+Route::post('/register','Auth\RegisterController@createUser');
 
 Route::get('/guru/{id}/profile','GuruController@profile');
+
