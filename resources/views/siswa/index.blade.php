@@ -18,7 +18,7 @@
 <i class="fas fa-download fa-sm text-white-50"></i> Export Data Excel
 </a>
 
-<a href="/siswa/exportpdf" class="btn btn-primary d-none d-sm-inline-block" style="margin-bottom:2%" >
+<a href="/siswa/exportpdf" class="btn btn-danger d-none d-sm-inline-block" style="margin-bottom:2%" >
 <i class="fas fa-download fa-sm text-white-50"></i> Export Data PDF
 </a>
 

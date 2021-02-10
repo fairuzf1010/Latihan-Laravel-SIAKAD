@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Alert;
+use Session;
+
 
 class RegisterController extends Controller
 {
@@ -81,7 +84,10 @@ class RegisterController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        return redirect()->intended('login');
+
+
+        Session::flash('sukses','Selamat Anda Berhasil Terdaftar !');
+        return redirect('register');
     }
 
 
@@ -89,6 +95,7 @@ class RegisterController extends Controller
     {
         return view('auths.register');
     }
+
 
 
 

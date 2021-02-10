@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class MasukController extends Controller
 {
@@ -17,6 +18,7 @@ class MasukController extends Controller
     }
     public function login()
     {
+
         return view('login');
     }
 
@@ -27,8 +29,45 @@ class MasukController extends Controller
 
     public function dashboard()
     {
+        if(Auth::check()) {
+
         return view('dashboard');
+        }
+
+
+        else{
+            return redirect('login');
+        }
+
+
     }
+
+
+
+
+
+    public function profile()
+    {
+        if(Auth::check()) {
+
+        return view('profile');
+        }
+
+
+        else{
+            return redirect('login');
+        }
+
+
+    }
+
+
+
+
+
+
+
+
 
 
 }

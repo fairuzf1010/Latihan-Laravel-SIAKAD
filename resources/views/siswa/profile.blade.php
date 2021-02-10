@@ -1,8 +1,8 @@
 @extends('siswa/dashboarddua')
 @section('tabel')
-              
-              
-     
+
+
+
 
 
         <div class="row">
@@ -16,7 +16,7 @@
                                     <img src="{{asset('gambar/'.$siswa->foto_siswa )}}" id="imgProfile" style="width: 100px; height: 100px;" class="img-thumbnail" />
                                     <div class="middle">
                                     <a href="/siswa/{{$siswa->id}}/edit" class = "btn btn-info btn-sm" > Ubah Profile</a>
-                                       
+
                                     </div>
                                 </div>
                                 <div class="userData ml-3">
@@ -42,7 +42,7 @@
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
                                     <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
-                                        
+
 
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
@@ -63,8 +63,8 @@
                                             </div>
                                         </div>
                                         <hr />
-                                        
-                                        
+
+
                                         <div class="row">
                                             <div class="col-sm-3 col-md-2 col-5">
                                                 <label style="font-weight:bold;">Progres</label>
@@ -86,16 +86,16 @@
                                             </div>
                                         </div>
                                         <hr />
-                                       
+
 
                                     </div>
                                     <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
-                                       
+
 
                                     <table class="table table-striped">
   <thead>
     <tr>
-    
+
       <th scope="col">Nama Pelajaran</th>
       <th scope="col">Kode</th>
       <th scope="col">Semester</th>
@@ -105,16 +105,16 @@
   </thead>
   <tbody>
       @foreach($siswa->mapel as $mapel)
-    
+
     <tr>
-      
+
       <td>{{$mapel->nama}}</td>
       <td>{{$mapel->kode}}</td>
       <td> {{$mapel->semester}} </td>
       <td> <a href="/guru/{{$mapel->guru->id}}/profile"> {{$mapel->guru->nama}}</a></td>
       <td><a href="#">{{$mapel->pivot->nilai}}</a></td>
     </tr>
-    
+
     @endforeach
   </tbody>
 </table>
@@ -133,7 +133,7 @@
                 </div>
             </div>
         </div>
-  
 
-    
+
+
 @endsection('tabel')

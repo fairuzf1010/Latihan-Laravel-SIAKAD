@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Login</title>
+  <title>登录页面 - Halaman Masuk</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,13 +17,14 @@
 
   <!-- Custom styles for this template-->
   <link href="bootstrap-admin/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="icon" href="{{asset('logo.png')}}">
 
 </head>
 
 <body class="bg-gradient-success">
 
   <div class="container">
-
+    <br>
     <!-- Outer Row -->
     <div class="row justify-content-center">
 
@@ -31,13 +32,21 @@
 
         <div class="card o-hidden border-0 shadow-lg my-5">
           <div class="card-body p-0">
+         @if ($pesan = Session::get('gagal'))
+            <div class="alert alert-danger alert-block">
+                {{$pesan}}
+            </div>
+            @endif
+
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block"> <img src="{{('gambar/dikretisasi.png')}}" alt="" style = "margin-top:150px;margin-left:10px;"> </div>
+
+              <div class="col-lg-6 d-none d-lg-block"> <img src="{{('logo.png')}}" alt="" style = "margin-top:80px;margin-left:10px;width:500px;"> </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">
+                        欢迎来到绿松石登录页面</h1>
                   </div>
                   <form class="user" method = "POST" action = "/postlogin" >
 
@@ -59,18 +68,18 @@
                     </button>
                     <hr>
                     <a href="index.html" class="btn btn-google btn-user btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
+                      <i class="fab fa-google fa-fw"></i> Halaman Home
                     </a>
                     <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                      <i class="fab fa-facebook-f fa-fw"></i> Halaman Blog
                     </a>
                   </form>
                   <hr>
                   <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                    <a class="small" href="forgot-password.html">Lupa Password ?</a>
                   </div>
                   <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                    <a class="small" href="{{route('register')}}">Belum Punya Akun ? Silakan Daftar !</a>
                   </div>
                 </div>
               </div>
@@ -93,7 +102,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="bootstrap-admin/js/sb-admin-2.min.js"></script>
-
+  @include('sweetalert::alert')
 </body>
 
 </html>

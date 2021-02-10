@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
+use Session;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -37,4 +40,37 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+    public function login()
+    {
+        return view('auths.login');
+    }
+
+    public function postlogin(Request $request)
+    {
+        if(Auth::attempt($request->only('email','password')))
+        {
+            return redirect('/home')->with('success', 'Selamat Datang');
+        }
+
+
+        else {
+
+            Session::flash('gagal','Email Anda Belum Terdaftar atau Password / Email Anda Salah');
+            return redirect('/login');
+        }
+
+        // return redirect('/login')->with('success', 'Task Created Successfully!');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/login');
+    }
+
+
+
 }

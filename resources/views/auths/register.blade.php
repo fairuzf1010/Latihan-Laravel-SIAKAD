@@ -10,7 +10,11 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-
+                    @if($pesan = Session::get('sukses'))
+                <div class="alert alert-success alert-block">
+                  <strong>{{$pesan}}</strong>
+                </div>
+                    @endif
 
 
                     <form method="POST" action="{{ route('register') }}">
@@ -74,6 +78,15 @@
                             </div>
                         </div>
                     </form>
+<br>
+<div class="row">
+    <div class="col-md-12"><div class="text-center">
+        <a href="{{route('login')}}" class="small"> Sudah Punya Akun ? Silakan Login </a>
+    </div></div>
+</div>
+
+
+
                 </div>
             </div>
         </div>

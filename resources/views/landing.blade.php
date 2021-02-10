@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Regna Bootstrap Template</title>
+  <title>
+    欢迎来到绿松石网站</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+{{--<link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">--}}
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
@@ -26,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/style.css')}}" rel="stylesheet">
+  <link rel="icon" href="{{asset('logo.png')}}">
 
   <!-- =======================================================
   * Template Name: Regna - v2.2.1
@@ -61,9 +63,6 @@
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li>
               <li><a href="#">Drop Down 3</a></li>
@@ -80,9 +79,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Welcome to Regna GuruApps</h1>
+      <h1>欢迎来到绿松石网站</h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="#about" class="btn-get-started">Get Started</a>
+      <a href="#about" class="btn-get-started">Mulai dari Sekarang !</a>
     </div>
   </section><!-- End Hero Section -->
 
@@ -537,7 +536,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
-
+  @include('sweet::alert')
 </body>
 
 </html>
