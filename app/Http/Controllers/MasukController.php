@@ -65,6 +65,23 @@ class MasukController extends Controller
 
 
 
+    public function editprofile()
+    {
+
+        return view('editprofile');
+
+
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

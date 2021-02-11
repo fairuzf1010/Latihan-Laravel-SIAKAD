@@ -42,7 +42,7 @@ Route::get('/utama','MasukController@utama');
 Route::get('/tabel','MasukController@tabel');
 Route::get('/home','MasukController@dashboard')->middleware('auth');
 Route::get('/profile','MasukController@profile')->middleware('auth');
-
+Route::get('/editprofile','MasukController@editprofile')->middleware('auth');
 
 
 //SISWA
